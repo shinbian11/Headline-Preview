@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headline Preview</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h2 class="title">헤드라인 미리보기 프로그램</h2>
+        <div id="question">
+          <p class="desc">
+            내가 정한 기사의 제목은 실제화면에서 어디까지 보이게 될까요?
+          </p>
+          <form>
+            <!-- 숫자가 아니거나, 100 ~ 400 사이 범위가 아니면 예외처리하기! -->
+            <p>원하는 길이를 입력하세요</p>
+            <input type="text" placeholder="(최대 100 ~ 400, 단위는 px)" />
+
+            <p>원하는 제목을 입력하세요</p>
+            <input type="text" placeholder="Headline 입력" />
+            <button type="submit">헤드라인 미리보기</button>
+          </form>
+        </div>
+      </header>
+
+      <main role="main">
+        <h2 class="title">헤드라인 미리보기</h2>
+        <div id="answer">
+          <p class="desc">해당 길이의 공간에서 기사제목은 여기까지 보입니다.</p>
+          <div id="answerText">
+            이 창에서, 제가 정한 기사의 제목은 여기까지 보이게 됩니다.
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div id="footer">
+          <div class="info">
+            <p>
+              footer 부분입니다. 엘리스 SW 엔지니어 트랙 2기 서울 수강생 김지환
+            </p>
+          </div>
+
+          <div class="detail">
+            <p>개인적으로 진행중인 간단한 토이 프로젝트</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
