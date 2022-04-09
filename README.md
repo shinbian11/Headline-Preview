@@ -8,7 +8,7 @@
 미리보기 기능이 필요하다고 생각해서 만들게 되었습니다.
 </pre>
 
-<h5>예시 사진</h5>
+<h5>예시 사진 (출처 : https://sports.news.naver.com/wfootball/index)</h5>
 
 ![1](https://user-images.githubusercontent.com/59140182/162555403-4a7632b3-c778-40a0-9fb9-a4e4321e4859.png)
 
