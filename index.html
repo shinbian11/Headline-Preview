@@ -25,7 +25,10 @@
             <button type="submit">헤드라인 미리보기</button>
             <!-- 버튼 클릭했을 때, 입력한 길이를 추출하려면, 해당 element를 querySelector 로 가져와서, 그 요소.value 를 출력하면 된다. -->
             <!-- 하지만 form 태그 내의 submit 버튼을 누르면, 창이 새로고침 되기 때문에, 콘솔창에 값이 찍히고 바로 사라진다. -->
-            <!-- 이 부분 잘 고려하여 구현 이어서 하기 -->
+
+            <!-- form 태그라서 제출하면 결과값 출력하고 창이 새로고침 됨...
+            button 태그의 type을 submit을 button으로 수정하는 방법도 있긴 한데... 이 방법이 유일한가??
+            아니다! event.preventDefault(); 함수를 이용해서 form 태그의 디폴트 동작인 제출 후 새로고침 행동을 인위적으로 막기! -->
           </form>
         </div>
       </header>
