@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Headline Preview</title>
     <link rel="stylesheet" href="/index.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
     <div id="container">
@@ -16,19 +17,17 @@
             내가 정한 기사의 제목은 실제화면에서 어디까지 보이게 될까요?
           </p>
           <form>
-            <!-- 숫자가 아니거나, 100 ~ 400 사이 범위가 아니면 예외처리하기! -->
-            <p>원하는 길이를 입력하세요</p>
-            <input type="text" placeholder="(최대 100 ~ 400, 단위는 px)" />
+            <p>원하는 길이를 입력하세요 (단위는 px로 계산됨)</p>
+            <input
+              id="inputLength"
+              type="text"
+              placeholder="(최대 100 ~ 400)"
+            />
 
             <p>원하는 제목을 입력하세요</p>
-            <input type="text" placeholder="Headline 입력" />
+            <input id="inputText" type="text" placeholder="Headline 입력" />
+            <!-- button 태그의 type을 submit을 button으로 수정하지 않고, event.preventDefault(); 함수를 이용해서 버튼 클릭 후 새로고침되는 디폴트 동작을 인위적으로 막음! -->
             <button type="submit">헤드라인 미리보기</button>
-            <!-- 버튼 클릭했을 때, 입력한 길이를 추출하려면, 해당 element를 querySelector 로 가져와서, 그 요소.value 를 출력하면 된다. -->
-            <!-- 하지만 form 태그 내의 submit 버튼을 누르면, 창이 새로고침 되기 때문에, 콘솔창에 값이 찍히고 바로 사라진다. -->
-
-            <!-- form 태그라서 제출하면 결과값 출력하고 창이 새로고침 됨...
-            button 태그의 type을 submit을 button으로 수정하는 방법도 있긴 한데... 이 방법이 유일한가??
-            아니다! event.preventDefault(); 함수를 이용해서 form 태그의 디폴트 동작인 제출 후 새로고침 행동을 인위적으로 막기! -->
           </form>
         </div>
       </header>
@@ -36,7 +35,7 @@
       <main role="main">
         <h2 class="title">헤드라인 미리보기</h2>
         <div id="answer">
-          <p class="desc">해당 길이의 공간에서 기사제목은 여기까지 보입니다.</p>
+          <p class="desc">해당 길이 (300px) 에서 보이는 기사제목</p>
           <div id="answerText">
             이 창에서, 제가 정한 기사의 제목은 여기까지 보이게 됩니다.
           </div>
